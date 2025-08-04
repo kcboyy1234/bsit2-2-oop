@@ -1,18 +1,26 @@
-import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Book book1 = new Book("Mawa Bear", "Kyle Gonzales", 90);
+        Book book2 = new Book("Mining the Cat", "Juris Ko", 80);
+        Book book3 = new Book("I Am Yours", "Razo Sir Paps", 70);
 
-    public class Main {
-        public static void main(String[] args) {
-            Scanner input = new Scanner(System.in);
-            int totalNum = 0;
-            int number;
+        book1.displayInfo();
+        book1.borrowBook();
+        book1.displayInfo();
+        book1.returnBook();
+        book1.displayInfo();
 
-            for (int i = 1; i <= 5; i++) {
-             System.out.println("Enter number " + i + ": ");
-             number = input.nextInt();
-             totalNum += number;
-            }
+        book2.displayInfo();
+        book2.borrowBook();
+        book2.displayInfo();
+        book2.displayInfo();
 
-            System.out.println(" ");
-            System.out.println("Total Number: " + totalNum);
-        }
+        book3.displayInfo();
+        book3.returnBook();
+        book3.returnBook();
+
+
+
+
     }
+}
